@@ -178,6 +178,16 @@ template {
 [hidden] {
   display: none
 }
+
+/*移动端优化：去除归档、标签、最新文章、公告、、只保留网站统计*/
+@media screen and (max-width: 800px) {
+    #aside_content
+    div:not(:last-child) {
+        display: none;
+        font-size: 13px;
+    }
+}
+
 .limit-one-line,
 #article-container .flink .flink-item-name,
 #article-container .flink .flink-item-desc,
@@ -4914,6 +4924,12 @@ h1.page-title + .tag-cloud-list {
   -o-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   transform: rotate(360deg);
+}
+#vcomment textarea {
+  background: url("https://images4blog.oss-cn-zhangjiakou.aliyuncs.com/3.jpg") 100% 100% no-repeat;
+}
+#vcomment textarea:focus {
+  background-image: none;
 }
 .fireworks {
   position: fixed;
